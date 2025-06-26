@@ -2,7 +2,8 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import axios from "axios"
 import toast from "react-hot-toast"
 
-const API_URL = "http://localhost:5040/api/auth"
+
+const API_URL = `${import.meta.env.VITE_API_URL}/auth`
 
 
 // Set up axios defaults

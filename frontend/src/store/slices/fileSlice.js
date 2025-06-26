@@ -2,7 +2,9 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import axios from "axios"
 import toast from "react-hot-toast"
 
-const API_URL = "http://localhost:5040/api/files"
+
+const API_URL = `${import.meta.env.VITE_API_URL}/files`
+
 
 // Async thunks
 export const uploadFile = createAsyncThunk("files/uploadFile", async (formData, { rejectWithValue }) => {

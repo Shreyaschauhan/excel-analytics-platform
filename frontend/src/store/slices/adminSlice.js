@@ -2,7 +2,8 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import axios from "axios"
 import toast from "react-hot-toast"
 
-const API_URL = "http://localhost:5040/api/admin"
+const API_URL = `${import.meta.env.VITE_API_URL}/admin`;
+
 
 // Async thunks for admin operations
 export const fetchSystemStats = createAsyncThunk("admin/fetchSystemStats", async (_, { rejectWithValue }) => {
