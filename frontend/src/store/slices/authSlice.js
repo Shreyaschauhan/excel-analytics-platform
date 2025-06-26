@@ -6,6 +6,7 @@ import toast from "react-hot-toast"
 const API_URL = `${import.meta.env.VITE_API_URL}/auth`
 
 
+
 // Set up axios defaults
 const token = localStorage.getItem("token")
 if (token) {
@@ -29,6 +30,10 @@ export const login = createAsyncThunk("auth/login", async ({ email, password }, 
     return rejectWithValue(message)
   }
 })
+
+
+console.log("✅ VITE_API_URL:", import.meta.env.VITE_API_URL);
+
 
 export const register = createAsyncThunk(
   "auth/register",
