@@ -17,7 +17,12 @@ const app = express()
 const PORT = process.env.PORT || 5040;
 
 // Middleware
-app.use(cors())
+//https://excelanalyticsplatform.netlify.app/
+app.use(cors({
+  origin: 'https://excelanalyticsplatform.netlify.app',  // ✅ Replace with actual Netlify URL
+  credentials: true
+}));
+
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
